@@ -10,6 +10,7 @@ setup.configureExpress({
   dir: __dirname
 }, app);
 
+require('./wp_devserver')();
 require('./routes')(app, express);
 
 module.exports = app;

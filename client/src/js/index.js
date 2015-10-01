@@ -1,3 +1,4 @@
-var hey = () => { return 'hello'; }
+var React = require('react');
+var App = require('./app');
 
-console.log(hey());
+React.render(<App />, document.body);

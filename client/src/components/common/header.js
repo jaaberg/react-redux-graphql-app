@@ -4,7 +4,11 @@ class Counter extends React.Component {
 
   render() {
     return (
-      <p> {this.props.count} </p>
+      <div>
+        <a href="/#/blog">Blog</a>
+        <br />
+        <a href="/#/about">About</a>
+      </div>
     );
   }
 };

@@ -1,8 +1,5 @@
-var webpack = require('webpack');
-var path = require('path');
-
-// Creates a shared file that has common code between pages
-var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.js');
+const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
   entry: {
@@ -14,13 +11,12 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
   ],
   module: {
     loaders: [
       {test: /\.js$/, loader: 'react-hot-loader!babel-loader', exclude: /node_modules/},
-      {test: /\.less$/, loader: 'style-loader!css-loader!less-loader'}, // use ! to chain loaders
-      {test: /\.css$/, loader: 'style-loader!css-loader'},
+      {test: /\.scss$/, loader: 'style!css!autoprefixer-loader?browsers=last 2 versions!sass'},
       {test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'} // inline base64 for <=8k images, direct URLs for the rest
     ]
   },
@@ -29,6 +25,7 @@ module.exports = {
     filename: '[name].js'
   },
   resolve: {
-    extensions: ['', '.js', '.json'] // you can now require('file') instead of require('file.coffee')
+    extensions: ['', '.js', '.json', '.scss'], // you can now require('file') instead of require('file.coffee')
+    modulesDirectories: ['src', 'node_modules']
   }
 };

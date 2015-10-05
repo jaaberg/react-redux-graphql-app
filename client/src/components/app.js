@@ -6,6 +6,10 @@ require('../style/common.scss');
 
 class App extends React.Component {
 
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <div>
@@ -14,6 +18,7 @@ class App extends React.Component {
       </div>
     );
   }
-};
+}
+
 
 export default App;

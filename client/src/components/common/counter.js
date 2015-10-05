@@ -1,31 +1,29 @@
 import React from 'react';
 
+var store = require('../../reducers');
+var ActionCreators = require('../../actionCreators/action-creators');
+
 class Counter extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      count: (props.start) ? props.start : 0
-    }
+    this._onClick = this._onClick.bind(this);
   }
 
   _onClick() {
-    this.setState({
-      count: this.state.count + 1
-    });
+    store.dispatch(ActionCreators.increaseCounter());
   }
 
   render() {
     return (
       <div>
         <p>
-          <span> {this.state.count} </span>
-          <button onClick={this._onClick.bind(this)}> Increase </button>
+          <span> {this.props.count} </span>
+          <button onClick={this._onClick}> Increase </button>
         </p>
       </div>
     );
   }
 }
-;
 
 export default Counter;

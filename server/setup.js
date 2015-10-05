@@ -13,6 +13,5 @@ module.exports.configureExpress = function(options, app) {
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({extended: false}));
   app.use(cookieParser());
-  app.use(require('less-middleware')(path.join(options.dir, '..', 'client', 'public')));
   app.use(options.express.static(path.join(options.dir, '..', 'client', 'public')));
 }

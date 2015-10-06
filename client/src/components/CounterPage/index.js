@@ -2,7 +2,7 @@ import React from 'react';
 
 import Counter from '../common/counter';
 
-class Blog extends React.Component {
+class CounterPage extends React.Component {
 
   constructor(props) {
     super(props);
@@ -11,11 +11,11 @@ class Blog extends React.Component {
   render() {
     return (
       <div>
-        <h1> Blog </h1>
+        <h1> Counter </h1>
         <Counter count={this.props.count} />
       </div>
     );
   }
 }
 
-export default Blog;
+export default CounterPage;

@@ -4,16 +4,16 @@ import { Provider } from 'react-redux';
 
 import store from './reducers';
 import App from './components/app';
-import AboutPage from './components/AboutPage';
-import BlogPageContainer from './containers/BlogPageContainer';
+import TodoPageContainer from './containers/TodoPageContainer';
+import CounterPageContainer from './containers/CounterPageContainer';
 
 React.render((
   <Provider store={store}>
     {() =>
       <Router>
         <Route path="/" component={App}>
-          <Route path="about" component={AboutPage}/>
-          <Route path="blog" component={BlogPageContainer}/>
+          <Route path="todo" component={TodoPageContainer}/>
+          <Route path="counter" component={CounterPageContainer}/>
         </Route>
       </Router>
     }

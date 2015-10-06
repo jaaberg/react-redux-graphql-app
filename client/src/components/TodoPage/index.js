@@ -1,14 +1,14 @@
 import React from 'react';
 
-class About extends React.Component {
+class TodoPage extends React.Component {
 
   render() {
     return (
       <div>
-        <h1> About me </h1>
+        <h1> Todo-list </h1>
       </div>
     );
   }
 };
 
-export default About;
+export default TodoPage;

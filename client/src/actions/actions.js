@@ -1,6 +1,6 @@
 var Constants = require('../constants/constants');
 
-var ActionCreators = {
+var Actions = {
 
   increaseCounter: function() {
     return {
@@ -10,4 +10,4 @@ var ActionCreators = {
 
 };
 
-module.exports = ActionCreators;
+module.exports = Actions;

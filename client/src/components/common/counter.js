@@ -1,7 +1,7 @@
 import React from 'react';
 
 var store = require('../../reducers');
-var ActionCreators = require('../../actionCreators/action-creators');
+var Actions = require('../../actions/actions');
 
 class Counter extends React.Component {
 
@@ -11,7 +11,7 @@ class Counter extends React.Component {
   }
 
   _onClick() {
-    store.dispatch(ActionCreators.increaseCounter());
+    store.dispatch(Actions.increaseCounter());
   }
 
   render() {

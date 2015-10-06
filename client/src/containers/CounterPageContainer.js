@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import BlogPage from '../components/BlogPage';
+import CounterPage from '../components/CounterPage';
 
-class BlogPageContainer extends React.Component {
+class CounterPageContainer extends React.Component {
 
   constructor(props) {
     super(props);
@@ -11,7 +11,7 @@ class BlogPageContainer extends React.Component {
 
   render() {
     return (
-      <BlogPage count={this.props.count} />
+      <CounterPage count={this.props.count} />
     );
   }
 };
@@ -22,4 +22,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(BlogPageContainer);
+export default connect(mapStateToProps)(CounterPageContainer);

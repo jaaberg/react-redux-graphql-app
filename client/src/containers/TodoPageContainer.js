@@ -11,13 +11,16 @@ class TodoPageContainer extends React.Component {
 
   render() {
     return (
-      <TodoPage />
+      <TodoPage
+        todos={this.props.todos}
+        dispatch={this.props.dispatch} />
     );
   }
 };
 
 function mapStateToProps(state) {
   return {
+    todos: state.todo.todos
   };
 }
 

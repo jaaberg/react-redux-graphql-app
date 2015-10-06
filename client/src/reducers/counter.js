@@ -1,4 +1,4 @@
-var Constants = require('../constants/constants');
+import { INCREASE_COUNTER } from '../constants/constants';
 
 function counterReducer(state, action) {
 
@@ -7,7 +7,7 @@ function counterReducer(state, action) {
   }
 
   switch (action.type) {
-    case Constants.INCREASE_COUNTER:
+    case INCREASE_COUNTER:
       return Object.assign({}, state, {count: state.count + 1});
     default:
       return state;

@@ -5,7 +5,8 @@ import createLogger from 'redux-logger';
 const logger = createLogger();
 
 let reducer = combineReducers({
-  counter: require('./counter')
+  counter: require('./counter'),
+  todo: require('./todo')
 });
 
 let createStoreWithMiddleware = applyMiddleware(thunk, logger)(createStore);

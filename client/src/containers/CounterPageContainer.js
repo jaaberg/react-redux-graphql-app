@@ -11,7 +11,9 @@ class CounterPageContainer extends React.Component {
 
   render() {
     return (
-      <CounterPage count={this.props.count} />
+      <CounterPage
+        count={this.props.count}
+        dispatch={this.props.dispatch} />
     );
   }
 };

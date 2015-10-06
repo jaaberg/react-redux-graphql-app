@@ -12,7 +12,9 @@ class CounterPage extends React.Component {
     return (
       <div>
         <h1> Counter </h1>
-        <Counter count={this.props.count} />
+        <Counter
+          count={this.props.count}
+          dispatch={this.props.dispatch}/>
       </div>
     );
   }

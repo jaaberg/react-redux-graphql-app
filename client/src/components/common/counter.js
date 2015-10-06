@@ -1,7 +1,6 @@
 import React from 'react';
 
-var store = require('../../reducers');
-var Actions = require('../../actions/actions');
+import { increaseCounter } from '../../actions/actions';
 
 class Counter extends React.Component {
 
@@ -11,7 +10,7 @@ class Counter extends React.Component {
   }
 
   _onClick() {
-    store.dispatch(Actions.increaseCounter());
+    this.props.dispatch(increaseCounter());
   }
 
   render() {

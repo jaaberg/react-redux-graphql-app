@@ -20,6 +20,12 @@ class TodoItem extends React.Component {
     );
   }
 }
-;
+
+TodoItem.propTypes = {
+  handleComplete: React.PropTypes.func.isRequired,
+  text: React.PropTypes.string,
+  id: React.PropTypes.number,
+  completed: React.PropTypes.bool,
+};
 
 export default TodoItem;

@@ -16,11 +16,16 @@ class TodoPageContainer extends React.Component {
         dispatch={this.props.dispatch} />
     );
   }
+}
+
+TodoPageContainer.propTypes = {
+  todos: React.PropTypes.array,
+  dispatch: React.PropTypes.func.isRequired,
 };
 
 function mapStateToProps(state) {
   return {
-    todos: state.todo.todos
+    todos: state.todo.todos,
   };
 }
 

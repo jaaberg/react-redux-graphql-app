@@ -12,12 +12,12 @@ class TodoPage extends React.Component {
     this.handleComplete = this.handleComplete.bind(this);
   }
 
-  _onKeyDown(e) {
-    const text = e.target.value.trim();
+  _onKeyDown(event) {
+    const text = event.target.value.trim();
 
-    if (e.which === 13) {
+    if (event.which === 13) {
       this.props.dispatch(addTodo(text));
-      e.target.value = '';
+      event.target.value = '';
     }
   }
 
@@ -44,5 +44,10 @@ class TodoPage extends React.Component {
     );
   }
 }
+
+TodoPage.propTypes = {
+  todos: React.PropTypes.array,
+  dispatch: React.PropTypes.func.isRequired,
+};
 
 export default TodoPage;

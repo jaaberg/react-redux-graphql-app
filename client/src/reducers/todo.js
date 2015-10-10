@@ -1,11 +1,11 @@
 import { ADD_TODO, COMPLETE_TODO } from '../constants/constants';
 
-function todoReducer(state, action) {
+const initialState = {
+  todos: [],
+  id: 0,
+};
 
-  if (typeof state === 'undefined') {
-    state = {todos: [], id: 0};
-  }
-
+function todoReducer(state = initialState, action = {}) {
   switch (action.type) {
     case ADD_TODO:
       const newTodo = {id: state.id, text: action.text, completed: false};
@@ -13,16 +13,15 @@ function todoReducer(state, action) {
 
     case COMPLETE_TODO:
       const updatedTodos = state.todos.map(todo =>
-        todo.id === action.id ?
-          Object.assign({}, todo, {completed: !todo.completed}) :
-          todo
+          todo.id === action.id ?
+            Object.assign({}, todo, {completed: !todo.completed}) :
+            todo
       );
       return Object.assign({}, state, {todos: updatedTodos});
 
     default:
       return state;
   }
-
 }
 
 export default todoReducer;

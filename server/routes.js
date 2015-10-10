@@ -5,7 +5,7 @@ exports = module.exports = function(app, express) {
 
   router.get('/', function(req, res, next) {
     res.render('index', {
-      title: 'Express'
+      title: 'Express',
     });
   });
 

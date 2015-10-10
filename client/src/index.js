@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, Link } from 'react-router';
+import { Router, Route } from 'react-router';
 import { Provider } from 'react-redux';
 import { DevTools, DebugPanel } from 'redux-devtools/lib/react';
 import DiffMonitor from 'redux-devtools-diff-monitor';
@@ -23,8 +23,7 @@ React.render((
     </Provider>
     <DebugPanel top right bottom>
       <DevTools store={store}
-                monitor={DiffMonitor}
-                visibleOnLoad={true} />
+                monitor={DiffMonitor} />
     </DebugPanel>
   </div>
-), document.querySelector('#main'))
+), document.querySelector('#main'));

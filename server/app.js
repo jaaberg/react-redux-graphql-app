@@ -7,7 +7,7 @@ var app = express();
 setup.configureExpress({
   express: express,
   logger: logger,
-  dir: __dirname
+  dir: __dirname,
 }, app);
 
 require('./wp_devserver')();

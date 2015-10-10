@@ -16,11 +16,16 @@ class CounterPageContainer extends React.Component {
         dispatch={this.props.dispatch} />
     );
   }
+}
+
+CounterPageContainer.propTypes = {
+  count: React.PropTypes.number,
+  dispatch: React.PropTypes.func.isRequired,
 };
 
 function mapStateToProps(state) {
   return {
-    count: state.counter.count
+    count: state.counter.count,
   };
 }
 

@@ -23,6 +23,12 @@ class Counter extends React.Component {
       </div>
     );
   }
+
 }
+
+Counter.propTypes = {
+  count: React.PropTypes.number,
+  dispatch: React.PropTypes.func.isRequired,
+};
 
 export default Counter;

@@ -1,6 +1,7 @@
 import { compose, createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import { devTools, persistState } from 'redux-devtools';
+import { persistState } from 'redux-devtools';
+const DevTools = require('../containers/DevTools');
 
 const reducer = combineReducers({
   counter: require('./counter'),
@@ -9,7 +10,7 @@ const reducer = combineReducers({
 
 const createStoreWithMiddleware = compose(
   applyMiddleware(thunk),
-  devTools(),
+  DevTools.instrument(),
   persistState(window.location.href.match(/[?&]debug_session=([^&]+)\b/))
 )(createStore);
 

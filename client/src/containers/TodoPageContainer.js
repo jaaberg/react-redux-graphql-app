@@ -13,7 +13,7 @@ class TodoPageContainer extends React.Component {
     return (
       <TodoPage
         todos={this.props.todos}
-        dispatch={this.props.dispatch} />
+        dispatch={this.props.dispatch}/>
     );
   }
 }

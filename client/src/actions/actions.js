@@ -1,27 +1,21 @@
 const Constants = require('../constants/constants');
 
-const Actions = {
+export function increaseCounter() {
+  return {
+    type: Constants.INCREASE_COUNTER,
+  };
+}
 
-  increaseCounter: function() {
-    return {
-      type: Constants.INCREASE_COUNTER,
-    };
-  },
+export function addTodo(text) {
+  return {
+    type: Constants.ADD_TODO,
+    text: text
+  };
+}
 
-  addTodo: function(text) {
-    return {
-      type: Constants.ADD_TODO,
-      text: text,
-    };
-  },
-
-  completeTodo: function(id) {
-    return {
-      type: Constants.COMPLETE_TODO,
-      id: id,
-    };
-  },
-
-};
-
-module.exports = Actions;
+export function completeTodo(id) {
+  return {
+    type: Constants.COMPLETE_TODO,
+    id: id
+  };
+}

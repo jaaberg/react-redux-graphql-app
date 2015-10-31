@@ -7,7 +7,7 @@ exports = module.exports = function() {
     hot: true,
     historyApiFallback: true,
     proxy: {
-      '*': 'http://localhost:3000',
+      '*': 'http://localhost:3000'
     },
   }).listen(3001, 'localhost', function(err, result) {
       if (err) {

@@ -5,7 +5,7 @@ const DevTools = require('../containers/DevTools');
 
 const reducer = combineReducers({
   counter: require('./counter'),
-  todo: require('./todo'),
+  todo: require('./todo')
 });
 
 const createStoreWithMiddleware = compose(

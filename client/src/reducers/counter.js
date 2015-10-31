@@ -1,7 +1,7 @@
 import { INCREASE_COUNTER } from '../constants/constants';
 
 const initialState = {
-  count: 0,
+  count: 0
 };
 
 function counterReducer(state = initialState, action = {}) {

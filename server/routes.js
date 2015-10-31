@@ -3,9 +3,9 @@ var path = require('path');
 exports = module.exports = function(app, express) {
   var router = express();
 
-  router.get('/', function(req, res, next) {
+  router.get('/', function(req, res) {
     res.render('index', {
-      title: 'Express',
+      title: 'Express'
     });
   });
 

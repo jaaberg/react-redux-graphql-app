@@ -28,7 +28,7 @@ class Counter extends React.Component {
 
 Counter.propTypes = {
   count: React.PropTypes.number,
-  dispatch: React.PropTypes.func.isRequired,
+  dispatch: React.PropTypes.func.isRequired
 };
 
 export default Counter;

@@ -47,7 +47,7 @@ class TodoPage extends React.Component {
 
 TodoPage.propTypes = {
   todos: React.PropTypes.array,
-  dispatch: React.PropTypes.func.isRequired,
+  dispatch: React.PropTypes.func.isRequired
 };
 
 export default TodoPage;

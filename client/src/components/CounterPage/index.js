@@ -22,7 +22,7 @@ class CounterPage extends React.Component {
 
 CounterPage.propTypes = {
   count: React.PropTypes.number,
-  dispatch: React.PropTypes.func.isRequired,
+  dispatch: React.PropTypes.func.isRequired
 };
 
 export default CounterPage;

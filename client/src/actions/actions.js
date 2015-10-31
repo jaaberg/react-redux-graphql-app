@@ -2,7 +2,7 @@ const Constants = require('../constants/constants');
 
 export function increaseCounter() {
   return {
-    type: Constants.INCREASE_COUNTER,
+    type: Constants.INCREASE_COUNTER
   };
 }
 

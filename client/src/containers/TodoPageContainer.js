@@ -13,19 +13,19 @@ class TodoPageContainer extends React.Component {
     return (
       <TodoPage
         todos={this.props.todos}
-        dispatch={this.props.dispatch}/>
+        dispatch={this.props.dispatch} />
     );
   }
 }
 
 TodoPageContainer.propTypes = {
   todos: React.PropTypes.array,
-  dispatch: React.PropTypes.func.isRequired,
+  dispatch: React.PropTypes.func.isRequired
 };
 
 function mapStateToProps(state) {
   return {
-    todos: state.todo.todos,
+    todos: state.todo.todos
   };
 }
 

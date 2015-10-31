@@ -2,7 +2,7 @@ import { ADD_TODO, COMPLETE_TODO } from '../constants/constants';
 
 const initialState = {
   todos: [],
-  id: 0,
+  id: 0
 };
 
 function todoReducer(state = initialState, action = {}) {
